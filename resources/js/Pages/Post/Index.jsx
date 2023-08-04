@@ -1,9 +1,10 @@
 import React from "react";
-import { InertiaLink, usePage } from "@inertiajs/inertia-react";
+import { InertiaLink } from "@inertiajs/inertia-react";
+import { usePage } from '@inertiajs/react'
 
 const Index = () => {
   const { posts } = usePage().props;
-  const { data } = posts;
+  // console.log(posts);
 
   return (
     <div>
@@ -29,7 +30,7 @@ const Index = () => {
               </tr>
             </thead>
             <tbody>
-              {data.map(({ id, title, description }) => (
+              {posts.map(({ id, title, description }) => (
                 <tr key={id} className="">
                   <td className="border-t">
                     <InertiaLink
@@ -67,7 +68,7 @@ const Index = () => {
                   </td>
                 </tr>
               ))}
-              {data.length === 0 && (
+              {posts.length === 0 && (
                 <tr>
                   <td
                     className="px-6 py-4 border-t"

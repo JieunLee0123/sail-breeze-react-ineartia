@@ -1,13 +1,17 @@
 import React from "react";
 import { Inertia } from "@inertiajs/inertia";
-import { InertiaLink, usePage, useForm } from "@inertiajs/inertia-react";
+import { InertiaLink, useForm } from "@inertiajs/inertia-react";
+import { usePage } from '@inertiajs/react'
 
 const Edit = () => {
   const { post } = usePage().props;
+  
   const { data, setData, put, errors } = useForm({
     title: post.title || "",
     description: post.description || "",
   });
+
+  // console.log(post)
 
   function handleSubmit(e) {
     e.preventDefault();
