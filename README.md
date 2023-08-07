@@ -10,6 +10,14 @@ breeze - react<br />
 
 <br />
 
+## Start
+
+1. alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+2. sail up
+3. [in container] npm run dev
+
+<br />
+
 ## 기록
 
 [jetstream & breeze]<br />
