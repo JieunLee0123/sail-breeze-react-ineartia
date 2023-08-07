@@ -7,6 +7,7 @@
 
 jetstream - vue ( default )<br />
 breeze - react<br />
+[tailwind](https://blog.sailscasts.com/how-I-setup-tailwindcss-and-sails)<br />
 
 <br />
 
@@ -16,6 +17,10 @@ breeze - react<br />
 - 후에 breeze 와 react 를 같이 설치함, 그러자 jetstream 인식안되고 breeze 만 인식하는 것 같음<br />
 - jetstream, breeze 둘다 ineartia 와 같이 설치할 수 있다.<br />
 - jetstream, breeze 둘다 인증기능을 구현, breeze 보다 jetstream 이 기능이 훨씬 많다.<br />
+
+<br />
+
+- store -> 403 forbidden error POST 도무지 왜이런지 모르겠음 xdebug 설치해서 확인해봐야할 듯
 
 <br />
 
