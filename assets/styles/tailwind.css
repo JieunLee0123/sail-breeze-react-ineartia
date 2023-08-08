@@ -1165,11 +1165,6 @@ select {
   border-top-width: 1px;
 }
 
-.bg-yellow_01 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 219 89 / var(--tw-bg-opacity));
-}
-
 .bg-sub_green {
   --tw-bg-opacity: 1;
   background-color: rgb(85 187 69 / var(--tw-bg-opacity));
@@ -1681,6 +1676,11 @@ select {
     border-radius: 0.5rem;
   }
 
+  .sm\:bg-yellow_00 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 202 11 / var(--tw-bg-opacity));
+  }
+
   .sm\:p-8 {
     padding: 2rem;
   }
@@ -1708,15 +1708,14 @@ select {
   }
 }
 
-@media (min-width: 768px) {
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .lg\:gap-8 {
     gap: 2rem;
+  }
+
+  .lg\:bg-blue_04 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(236 240 241 / var(--tw-bg-opacity));
   }
 
   .lg\:p-8 {
