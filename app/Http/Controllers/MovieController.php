@@ -15,9 +15,9 @@ class MovieController extends Controller
      */
     public function index()
     {
-        $movie_ids = Movie::latest()->get();
+        $movies = Movie::latest()->get();
 
-        return Inertia::render('Movie/Index', ['movie_ids' => $movie_ids]);
+        return Inertia::render('Movie/Index', ['movies' => $movies]);
     }
 
     /**
@@ -25,7 +25,10 @@ class MovieController extends Controller
      */
     public function create()
     {
-        return Inertia::render('Movie/MovieLists');
+        return Inertia::render('Movie/MovieLists', [
+          'TMDB_ENDPOINT' => config('services.tmdb.endpoint'),
+          'TMDB_APP_KEY' => config('services.tmdb.api')
+        ]);
     }
 
     /**
@@ -33,13 +36,14 @@ class MovieController extends Controller
      */
     public function store(StoreMoviesRequest $request)
     {
-        // Movie::create(
-        //     $request->validated()
-        // );
+        // dd(gettype($request->validated()));
+        // dd($request->all());
 
-        // return Redirect::route('Movie.index');
-        // dd($request->validated());
-        return 'success';
+        Movie::create(array(
+            $request->validated()
+        ));
+
+        return Redirect::route('movies.index');
     }
 
     /**

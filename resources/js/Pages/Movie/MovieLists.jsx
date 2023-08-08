@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Inertia } from "@inertiajs/inertia";
 import { InertiaLink, useForm } from "@inertiajs/inertia-react";
+import { usePage } from '@inertiajs/react'
 
 const Create = () => {
+  const { TMDB_ENDPOINT, TMDB_APP_KEY } = usePage().props;
+
   const [moviesArr, setMoviesArr] = useState([]);
   const [checkedIdArr, SetCheckedIdArr] = useState([]);
 
   const { data, setData, errors, post } = useForm({ movie_ids: [] });
 
-  const onClickSaveBtn = (e) => {
+  const onSubmit = (e) => {
+    console.log('submit')
     e.preventDefault();
     // setData('movie_ids', [...checkedIdArr]);
     // console.log(data.movie_ids)
@@ -27,13 +31,13 @@ const Create = () => {
   }
 
   const params = {
-    api_key: $inertia.page.props.TMDB_APP_KEY,
+    api_key: TMDB_APP_KEY,
     language: 'ko',
     page: 5,
     region: 'KR'	
   }
 
-  const getMoviesArr = () => axios.get('https://api.themoviedb.org/3/movie/now_playing', {params})
+  const getMoviesArr = () => axios.get(TMDB_ENDPOINT+'movie/now_playing', {params})
     .then((res) => { 
       const data = res.data.results;
       setMoviesArr(data);
@@ -46,14 +50,14 @@ const Create = () => {
   }, [])
 
   return (
-    <div className="max-w-5xl mx-auto">
+    <form name="createForm" className="max-w-5xl mx-auto" onSubmit={onSubmit}>
       {/* Card is full width. Use in 6 col grid for best view. */}
       {/* Card code block start */}
       <div className="bg-white rounded w-full pb-6">
         {/* title & save btn */}
         <div className="flex justify-between mx-4 sm:mx-8 mb-6">
           <h2 className="p-4 sm:p-8 text-lg font-bold text-gray-800">Your Subscriptions</h2>
-          <button onClick={(e) => onClickSaveBtn(e)} className="self-center bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+          <button type="submit" className="self-center bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
             Save
           </button>
         </div>
@@ -107,7 +111,7 @@ const Create = () => {
         </style>
       </div>
       {/* Card code block end */}
-    </div>
+    </form>
   );
 };
 

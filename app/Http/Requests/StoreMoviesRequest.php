@@ -11,7 +11,7 @@ class StoreMoviesRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -19,10 +19,10 @@ class StoreMoviesRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array|string>
      */
-    public function rules(): array
+    public function rules()
     {
         return [
-            'movie_ids' => 'requred|array'
+            'movie_ids' => 'array'
         ];
     }
 }

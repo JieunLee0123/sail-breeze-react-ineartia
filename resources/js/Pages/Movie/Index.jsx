@@ -3,9 +3,9 @@ import { InertiaLink } from "@inertiajs/inertia-react";
 import { usePage } from '@inertiajs/react'
 
 const Index = () => {
-  const { movie_ids } = usePage().props;
+  const { movies } = usePage().props;
 
-  console.log(movie_ids)
+  console.log(movies.movie_ids)
 
   return (
     <div>
