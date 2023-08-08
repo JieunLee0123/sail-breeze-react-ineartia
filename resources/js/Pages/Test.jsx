@@ -2,7 +2,7 @@ import React from 'react';
         
 const Test = () => {
   return (
-    <div className="bg-white dark:bg-gray-800 shadow rounded mx-auto w-[300px]">
+    <div className="bg-sub_green dark:bg-gray-800 shadow rounded mx-auto w-[300px]">
       test
 
       <div className="relative w-full h-40">
