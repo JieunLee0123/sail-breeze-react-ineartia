@@ -16,7 +16,7 @@ import Like from "./button/Like";
 //         "area": "경북 칠곡군",
 //         "fundingType": "한살림펀딩",
 //         "rewardType": "쿠폰형",
-//         "raisingAmount": 300
+//         "raisingAmount": 300 //모집금액
 
 const Card = ({ cardData }) => {
     const {
