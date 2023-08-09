@@ -1,12 +1,24 @@
 # Full-Stack Single Page Application 
-* with Laravel 9, MySQL, Vue.js, Inertia, Jetstreamm, React.js, Breeze and Docker<br />
+* with Laravel 9, MySQL, Inertia, Jetstreamm ( Vue ), Breeze ( React ), Sail<br />
 
 <br />
 
 ## Installation
 
-jetstream - vue ( default )<br />
-breeze - react<br />
+[빌드 & 세일 업]<br />
+1. /vendor/bin/sail up -d<br />
+
+<br />
+
+[in laravel.test container]<br />
+1. npm install<br />
+2. npm run dev<br />
+3. php artisan migration<br />
+
+<br />
+
+[localhost]<br />
+1. localhost/test<br />
 
 <br />
 
