@@ -20,13 +20,10 @@ import Like from "./button/Like";
 
 const Card = ({ cardData }) => {
     const {
-        id,
         amount,
         period,
         preview,
         rates2,
-        ratioOfUserAmounts,
-        step,
         title,
         thumbnail,
         area,
@@ -34,10 +31,18 @@ const Card = ({ cardData }) => {
         rewardType,
         raisingAmount,
     } = cardData;
-    console.log(id);
+
+    const formatNumber = amount.toLocaleString();
     return (
         <article className="w-full sm:w-[340px] flex flex-col mb-5 shadow-md">
-            <div className="bg-gray_04">
+            <div
+                style={{
+                    backgroundImage: `url(${thumbnail})`,
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                }}
+            >
                 <div className="h-[240px] p-[10px]">
                     <div className="flex flex-row gap-1">
                         <FundingType text={fundingType} />
@@ -54,9 +59,9 @@ const Card = ({ cardData }) => {
                     </div>
                     <h3 className="text-gray_03 font-medium">{title}</h3>
                     <div className="flex flex-row justify-between my-6 text-lg font-bold text-gray_03">
-                        <p className="text-blue_02">연 9%</p>
-                        <p>6개월</p>
-                        <p>1,200만원</p>
+                        <p className="text-blue_02">연 {rates2}%</p>
+                        <p>{period}개월</p>
+                        <p>{formatNumber}만원</p>
                     </div>
                     <p className="text-right text-sm font-medium">
                         <span className="text-blue_02">10.0%</span> 달성
