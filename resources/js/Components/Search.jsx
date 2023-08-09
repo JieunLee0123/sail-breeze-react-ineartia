@@ -12,7 +12,7 @@ const Search = () => {
 
   return (
     <>
-      <form className="flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
+      <form className="flex flex-col items-center gap-3 sm:flex-row sm:gap-3">
         <div className="w-full sm:w-[60%] lg:w-[70%]">
           <label htmlFor="voice-search" className="sr-only">Search</label>
           <div className="relative w-full">
@@ -29,7 +29,7 @@ const Search = () => {
           <button style={{ color: "#fff" }} type="submit" className="box-border inline-flex w-full items-center justify-center py-2.5 px-3 text-sm font-semibold text-white bg-blue_01 rounded-lg">
             검색하기
           </button>
-          <button type="button" onClick={onClickDetailBtn} className="box-border inline-flex w-full items-center justify-center py-2.5 px-3 text-sm font-semibold text-white bg-yellow_00 rounded-lg">
+          <button type="button" onClick={onClickDetailBtn} className="box-border inline-flex w-full items-center justify-center py-2.5 px-3 text-sm font-semibold text-gray-900 bg-yellow_00 rounded-lg">
             상세검색
           </button>
         </div>
@@ -38,7 +38,7 @@ const Search = () => {
       {
         detailSelectBox
         ?
-          <div className="flex flex-wrap justify-between gap-5 my-20 sm:gap-3">
+          <div className="flex flex-wrap justify-between gap-5 mt-20 sm:gap-3">
             <div className="w-full sm:w-[48%] lg:w-[24%]">
               <label htmlFor="countries" className="block mb-2 text-sm font-semibold text-gray-900">투자 진행상태</label>
               <Select options={["전체", "준비중", "투자중", "투자완료"]} />

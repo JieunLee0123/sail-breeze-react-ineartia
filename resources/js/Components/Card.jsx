@@ -2,7 +2,7 @@ import React from "react";
 import FundingType from "./label/FundingType";
 import RewardType from "./label/RewardType";
 import Area from "./label/Area";
-import Like from "./button/Like";
+// import Like from "./button/Like";
 
 // "id": 744,
 //         "amount": 4500,
@@ -51,6 +51,7 @@ const Card = ({ cardData }) => {
                     <div className="flex flex-row justify-between mt-4 mb-1">
                         <h3 className="w-5/6 text-2xl font-bold">{preview}</h3>
                         <Like />
+
                     </div>
                     <h3 className="text-gray_03 font-medium">{title}</h3>
                     <div className="flex flex-row justify-between my-6 text-lg font-bold text-gray_03">
