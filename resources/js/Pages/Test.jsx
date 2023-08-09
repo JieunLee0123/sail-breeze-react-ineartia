@@ -17,7 +17,7 @@ const Test = () => {
                 <div className="h-10" />
                 <Search />
                 <div className="h-20" />
-                <p>{data.length}개의 상품이 있습니다.</p>
+                <p className="text-lg font-bold text-gray_01">{data.length}개의 상품이 있습니다.</p>
                 <div className="h-5" />
                 <CardList data={data}/>
               </div>
