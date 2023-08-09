@@ -40,8 +40,8 @@ const Card = ({ cardData }) => {
             <div className="bg-gray_04">
                 <div className="h-[240px] p-[10px]">
                     <div className="flex flex-row gap-1">
-                        <FundingType text="우리동네펀딩" />
-                        <RewardType text="쿠폰형" />
+                        <FundingType text={fundingType} />
+                        <RewardType text={rewardType} />
                     </div>
                 </div>
             </div>
