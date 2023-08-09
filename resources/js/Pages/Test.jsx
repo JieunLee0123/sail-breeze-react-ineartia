@@ -16,6 +16,7 @@ const Test = () => {
                     <Search />
                     <div className="h-10" />
                     <p>34개의 상품이 있습니다.</p>
+                    <div className="h-5" />
                     <CardList />
                 </div>
             </div>

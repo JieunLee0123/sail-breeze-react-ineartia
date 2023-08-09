@@ -32,7 +32,7 @@ export default {
             yellow_04: "#FFF7D2",
             // sub
             blue_01: "#205388",
-            blue_02: "#205388",
+            blue_02: "#518BFF",
             blue_03: "#96BDFF",
             blue_04: "#ECF0F1",
             // sub_color
@@ -47,6 +47,7 @@ export default {
             gray_04: "#B2B4B7",
             gray_05: "#EBEBEB",
             gray_bg: "#F6F6F6",
+            white: "#FFFFFF",
         },
     },
 
