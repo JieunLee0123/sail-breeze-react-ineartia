@@ -90,8 +90,8 @@ const Select = ({
         type="button"
         className={
           state.showOptions
-            ? "transition transition-all relative w-full bg-white rounded-md shadow-lg pl-3 pr-10 py-3 text-left cursor-default outline-none ring-1 ring-indigo-500 border-indigo-500 sm:text-sm"
-            : "transition transition-all relative w-full bg-white rounded-md shadow-lg pl-3 pr-10 py-3 text-left cursor-default sm:text-sm"
+            ? "transition transition-all relative w-full bg-white rounded-sm shadow-lg pl-3 pr-10 py-3 text-left cursor-default outline-none ring-1 ring-indigo-500 border-indigo-500 sm:text-sm"
+            : "transition transition-all relative w-full bg-white rounded-sm shadow-lg pl-3 pr-10 py-3 text-left cursor-default sm:text-sm"
         }
         onClick={handleClick}
       >
@@ -103,8 +103,8 @@ const Select = ({
         </span>
       </button>
       {state.showOptions && (
-        <div className="absolute mt-1 w-full z-10 rounded-md bg-white shadow-lg">
-          <ul className="max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm" style={{background:"#fff"}}>
+        <div className="absolute mt-1 w-full z-10 rounded-sm bg-white shadow-lg">
+          <ul className="max-h-56 rounded-sm py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm" style={{background:"#fff"}}>
             {options.map((option, idx) => (
               <SelectOption
                 key={idx}

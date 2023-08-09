@@ -2,7 +2,7 @@ import React from "react";
 import FundingType from "./label/FundingType";
 import RewardType from "./label/RewardType";
 import Area from "./label/Area";
-import Like from "./button/Like";
+// import Like from "./button/Like";
 
 // "id": 744,
 //         "amount": 4500,
@@ -34,14 +34,16 @@ const Card = ({ cardData }) => {
 
     const formatNumber = amount.toLocaleString();
     return (
-        <article className="w-full sm:w-[340px] flex flex-col mb-5 shadow-md">
+        <article className="w-full lg:w-[32%] flex flex-col sm:flex-row lg:flex-col mb-5 shadow-md cursor-pointer">
             <div
                 style={{
+                  
                     backgroundImage: `url(${thumbnail})`,
                     backgroundPosition: "center",
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",
-                }}
+              }}
+              className="sm:w-[50%] lg:w-auto"
             >
                 <div className="h-[240px] p-[10px]">
                     <div className="flex flex-row gap-1">
@@ -50,15 +52,15 @@ const Card = ({ cardData }) => {
                     </div>
                 </div>
             </div>
-            <div>
+            <div className="sm:w-[50%]  lg:w-auto">
                 <div className="px-4 pt-5">
                     <Area text={area} />
                     <div className="flex flex-row justify-between mt-4 mb-1">
-                        <h3 className="w-5/6 text-2xl font-bold">{preview}</h3>
-                        <Like />
+                    <h3 className="w-5/6 text-lg lg:text-xl font-bold truncate">{preview}</h3>
+                        {/* <Like /> */}
                     </div>
-                    <h3 className="text-gray_03 font-medium">{title}</h3>
-                    <div className="flex flex-row justify-between my-6 text-lg font-bold text-gray_03">
+                    <h3 className="text-gray_03 font-medium text-sm lg:text-base truncate">{title}</h3>
+                    <div className="flex flex-row justify-between my-7 text-lg lg:text-xl font-bold text-gray_03">
                         <p className="text-blue_02">연 {rates2}%</p>
                         <p>{period}개월</p>
                         <p>{formatNumber}만원</p>

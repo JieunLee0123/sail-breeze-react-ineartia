@@ -21,15 +21,15 @@ const Search = () => {
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
               </svg>
             </div>
-            <input type="text" id="voice-search" className="focus:ring-0 border-0 shadow-md bg-gray-50 text-gray-900 text-sm rounded-lg block w-full pl-10 p-2.5" placeholder="Search" required />
+            <input type="text" id="voice-search" className="focus:ring-0 border-0 shadow-md bg-gray-50 text-gray-900 text-sm rounded-sm block w-full pl-10 p-2.5" placeholder="Search" required />
           </div>
         </div>
 
         <div className="flex items-center w-full sm:w-[40%] lg:w-[30%] gap-2">
-          <button style={{ color: "#fff" }} type="submit" className="box-border inline-flex w-full items-center justify-center py-2.5 px-3 text-sm font-semibold text-white bg-blue_01 rounded-lg">
+          <button style={{ color: "#fff" }} type="submit" className="box-border inline-flex w-full items-center justify-center py-2.5 px-3 text-sm font-semibold text-white bg-blue_01 rounded-sm">
             검색하기
           </button>
-          <button type="button" onClick={onClickDetailBtn} className="box-border inline-flex w-full items-center justify-center py-2.5 px-3 text-sm font-semibold text-gray-900 bg-yellow_00 rounded-lg">
+          <button type="button" onClick={onClickDetailBtn} className="box-border inline-flex w-full items-center justify-center py-2.5 px-3 text-sm font-semibold text-gray-900 bg-yellow_00 rounded-sm">
             상세검색
           </button>
         </div>
@@ -42,7 +42,7 @@ const Search = () => {
             <div className="w-full sm:w-[48%] lg:w-[24%]">
               <label htmlFor="countries" className="block mb-2 text-sm font-semibold text-gray-900">투자 진행상태</label>
               <Select options={["전체", "준비중", "투자중", "투자완료"]} />
-              {/* <select id="countries" className="focus:ring-0 border-0 shadow-md text-gray-900 text-sm rounded-lg  block w-full p-2.5">
+              {/* <select id="countries" className="focus:ring-0 border-0 shadow-md text-gray-900 text-sm rounded-sm  block w-full p-2.5">
                 <option defaultValue>전체</option>
                 <option value="US">준비중</option>
                 <option value="CA">투자중</option>
@@ -52,7 +52,7 @@ const Search = () => {
             <div className="w-full sm:w-[48%] lg:w-[24%]">
               <label htmlFor="countries" className="block mb-2 text-sm font-semibold text-gray-900">그룹별</label>
               <Select options={["전체", "동네", "한살림"]} />
-              {/* <select id="countries" className="focus:ring-0 border-0 shadow-md bg-gray-50 text-gray-900 text-sm rounded-lg  block w-full p-2.5">
+              {/* <select id="countries" className="focus:ring-0 border-0 shadow-md bg-gray-50 text-gray-900 text-sm rounded-sm  block w-full p-2.5">
                 <option defaultValue>전체</option>
                 <option value="US">동네</option>
                 <option value="CA">한살림</option>
@@ -83,7 +83,7 @@ const Search = () => {
                 "제주 사회적경제기업 경쟁력 강화 [소셜 리부트]",
                 "경기도청 주변 도시재생 상권 크라우드펀딩"
               ]} />
-              {/* <select id="countries" className="focus:ring-0 border-0 shadow-md bg-gray-50 text-gray-900 text-sm rounded-lg  block w-full p-2.5">
+              {/* <select id="countries" className="focus:ring-0 border-0 shadow-md bg-gray-50 text-gray-900 text-sm rounded-sm  block w-full p-2.5">
                 <option defaultValue>전체</option>
                 <option value="US">2023 우리동네 크라우드펀딩</option>
                 <option value="CA">우리동네 펀딩</option>
@@ -129,7 +129,7 @@ const Search = () => {
                 "광주",
                 "제주"
               ]} />
-              {/* <select id="countries" className="focus:ring-0 border-0 shadow-md bg-gray-50 text-gray-900 text-sm rounded-lg  block w-full p-2.5">
+              {/* <select id="countries" className="focus:ring-0 border-0 shadow-md bg-gray-50 text-gray-900 text-sm rounded-sm  block w-full p-2.5">
                 <option defaultValue>전체</option>
                 <option value="US">서울</option>
                 <option value="CA">경기</option>
