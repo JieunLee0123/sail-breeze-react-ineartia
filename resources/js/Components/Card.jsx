@@ -47,7 +47,7 @@ const Card = ({ cardData }) => {
             </div>
             <div>
                 <div className="px-4 pt-5">
-                    <Area text="경북 칠곡군" />
+                    <Area text={area} />
                     <div className="flex flex-row justify-between mt-4 mb-1">
                         <h3 className="w-5/6 text-2xl font-bold">{preview}</h3>
                         <Like />
