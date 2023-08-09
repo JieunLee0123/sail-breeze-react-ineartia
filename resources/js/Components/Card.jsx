@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = () => {
     return (
-        <article className="w-[340px] flex flex-col">
+        <article className="w-full sm:w-[340px] flex flex-col sm:flex-row lg:flex-col">
             <div className="bg-gray_04">
                 <div className="flex flex-row h-[240px]">
                     <div>우리동네펀딩</div>
