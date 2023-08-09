@@ -24,7 +24,7 @@ const RewardType = ({ text }) => {
     return (
         <>
             {isLoading ? (
-                <>Loading..</>
+                <div className="bg-sub_pink">Loading..</div>
             ) : (
                 <div
                     className={`px-2 py-[6px] bg-${color} text-sm text-white font-extrabold`}
