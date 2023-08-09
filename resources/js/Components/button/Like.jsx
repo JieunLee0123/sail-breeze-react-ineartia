@@ -8,6 +8,7 @@ const Like = () => {
     const likeHandler = () => {
         setIsLike(!isLike);
     };
+  
     return (
         <button
             className="w-8 h-8 rounded border-[1px] border-gray_04 flex justify-center items-center"
