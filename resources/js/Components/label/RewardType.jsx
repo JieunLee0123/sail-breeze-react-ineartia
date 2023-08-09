@@ -1,10 +1,38 @@
-import React from "react";
+import { useState, useEffect } from "react";
 
-const RewardType = ({ text, color }) => {
+const RewardType = ({ text }) => {
+    const [isLoading, setIsLoading] = useState(true);
+    const [color, setColor] = useState("");
+
+    useEffect(() => {
+        const calculatedColor = bgColor(text);
+        setColor(calculatedColor);
+        setIsLoading(false);
+    }, [text]);
+
+    function bgColor(text) {
+        switch (text) {
+            case "쿠폰형":
+                return "gray_02";
+            case "금리형":
+                return "blue_01";
+            default:
+                return "sub_pink";
+        }
+    }
+
     return (
-        <div className="px-2 py-[6px] bg-blue_02 text-sm text-white font-extrabold">
-            {text}
-        </div>
+        <>
+            {isLoading ? (
+                <>Loading..</>
+            ) : (
+                <div
+                    className={`px-2 py-[6px] bg-${color} text-sm text-white font-extrabold`}
+                >
+                    {text}
+                </div>
+            )}
+        </>
     );
 };
 
