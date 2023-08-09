@@ -4,6 +4,7 @@ import Footer from "@/Components/Footer";
 import Subject from "@/Components/Subject";
 import Search from "@/Components/Search";
 import CardList from "@/Components/CardList";
+import Button from "@/Components/Button";
 
 const Test = () => {
     return (

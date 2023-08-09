@@ -29,6 +29,7 @@
     },
     "dependencies": {
         "@inertiajs/inertia-react": "^0.8.1",
+        "@mui/base": "^5.0.0-beta.10",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "vite-plugin-svgr": "^3.2.0"
