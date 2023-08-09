@@ -4,7 +4,37 @@ import RewardType from "./label/RewardType";
 import Area from "./label/Area";
 // import Like from "./button/Like";
 
-const Card = () => {
+// "id": 744,
+//         "amount": 4500,
+//         "period": 12,
+//         "preview": "4대 째 가업을 이은 양잠 농가, 고니골농장",
+//         "rates2": 6,
+//         "ratioOfUserAmounts": 1,
+//         "step": 200,
+//         "title": "고니골농장의 대환자금 펀딩",
+//         "thumbnail": "https://benefitplus.kr/files/investment-thumbnails/230327/ca87c4d5feb04b435e3d71ab2f75ae91839eaa25.jpg",
+//         "area": "경북 칠곡군",
+//         "fundingType": "한살림펀딩",
+//         "rewardType": "쿠폰형",
+//         "raisingAmount": 300
+
+const Card = ({ cardData }) => {
+    const {
+        id,
+        amount,
+        period,
+        preview,
+        rates2,
+        ratioOfUserAmounts,
+        step,
+        title,
+        thumbnail,
+        area,
+        fundingType,
+        rewardType,
+        raisingAmount,
+    } = cardData;
+    console.log(id);
     return (
         <article className="w-full sm:w-[340px] flex flex-col mb-5 shadow-md">
             <div className="bg-gray_04">
@@ -19,14 +49,11 @@ const Card = () => {
                 <div className="px-4 pt-5">
                     <Area text="경북 칠곡군" />
                     <div className="flex flex-row justify-between mt-4 mb-1">
-                        <h3 className="text-2xl font-bold">
-                            므므흐스 부엉이버거
-                        </h3>
-                        {/* <Like /> */}
+                        <h3 className="w-5/6 text-2xl font-bold">{preview}</h3>
+                        <Like />
+
                     </div>
-                    <h3 className="text-gray_03 font-medium">
-                        대구 근교 수제버거 맛집
-                    </h3>
+                    <h3 className="text-gray_03 font-medium">{title}</h3>
                     <div className="flex flex-row justify-between my-6 text-lg font-bold text-gray_03">
                         <p className="text-blue_02">연 9%</p>
                         <p>6개월</p>
