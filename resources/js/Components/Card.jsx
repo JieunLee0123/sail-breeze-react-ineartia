@@ -2,7 +2,7 @@ import React from "react";
 import FundingType from "./label/FundingType";
 import RewardType from "./label/RewardType";
 import Area from "./label/Area";
-import Like from "./button/Like";
+// import Like from "./button/Like";
 
 const Card = () => {
     return (
@@ -22,7 +22,7 @@ const Card = () => {
                         <h3 className="text-2xl font-bold">
                             므므흐스 부엉이버거
                         </h3>
-                        <Like />
+                        {/* <Like /> */}
                     </div>
                     <h3 className="text-gray_03 font-medium">
                         대구 근교 수제버거 맛집
