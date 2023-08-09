@@ -4,21 +4,22 @@ import Footer from "@/Components/Footer";
 import Subject from "@/Components/Subject";
 import Search from "@/Components/Search";
 import CardList from "@/Components/CardList";
+import Button from "@/Components/Button";
 
 const Test = () => {
     return (
         <>
             <Header />
-            <div className="mt-[84px] flex justify-center">
-                <div className="w-full mx-[34px] lg:w-[1060px] lg:mx-0 py-8">
-                    <Subject />
-                    <div className="h-10" />
-                    <Search />
-                    <div className="h-10" />
-                    <p>34개의 상품이 있습니다.</p>
-                    <CardList />
-                </div>
-            </div>
+              <div className="mt-[84px] flex justify-center bg-gray_bg">
+                  <div className="w-full mx-[34px] lg:w-[1060px] lg:mx-0 py-8">
+                      <Subject />
+                      <div className="h-10" />
+                      <Search />
+                      <div className="h-10" />
+                      <p>34개의 상품이 있습니다.</p>
+                      <CardList />
+                  </div>
+              </div>
             <Footer />
         </>
     );
