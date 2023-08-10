@@ -62,6 +62,7 @@ const Search = ({ data, setDisplayedCardData }) => {
                             id="voice-search"
                             className="focus:ring-0 border-0 shadow-md bg-gray-50 text-gray-900 text-sm rounded-sm block w-full pl-10 p-2.5"
                             placeholder="Search"
+                            autoComplete="off"
                             required
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
