@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import FundingType from "./label/FundingType";
 import RewardType from "./label/RewardType";
 import Area from "./label/Area";
-// import Like from "./button/Like";
+import Like from "./button/Like";
 
 const Card = ({ cardData }) => {
     const {
@@ -17,6 +17,7 @@ const Card = ({ cardData }) => {
         rewardType,
         raisingAmount,
     } = cardData;
+    const [isFinished, setIsFinished] = useState(false);
 
     const formatAmount = amount.toLocaleString();
 
@@ -27,8 +28,22 @@ const Card = ({ cardData }) => {
 
     const formattedPercent = percent(raisingAmount, amount).toFixed(1);
 
+    function finishedCheck(formattedPercent) {
+        Number(formattedPercent) === 100.0
+            ? setIsFinished(true)
+            : setIsFinished(false);
+    }
+
+    useEffect(() => {
+        finishedCheck(formattedPercent);
+    }, [formattedPercent]);
+
     return (
-        <article className="w-full lg:w-[32%] flex flex-col sm:flex-row lg:flex-col mb-7 shadow-md cursor-pointer">
+        <article
+            className={`w-full lg:w-[32%] flex flex-col sm:flex-row lg:flex-col mb-7 shadow-md cursor-pointer ${
+                isFinished ? "opacity-50" : "opacity-100"
+            }`}
+        >
             <div
                 style={{
                     backgroundImage: `url(${thumbnail})`,
@@ -52,7 +67,7 @@ const Card = ({ cardData }) => {
                         <h3 className="w-5/6 text-lg lg:text-xl font-bold truncate">
                             {preview}
                         </h3>
-                        {/* <Like /> */}
+                        <Like />
                     </div>
                     <h3 className="text-gray_03 font-medium text-sm lg:text-base truncate">
                         {title}
