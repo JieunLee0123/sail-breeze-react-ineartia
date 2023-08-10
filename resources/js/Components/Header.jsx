@@ -12,7 +12,7 @@ const Header = () => {
     return (
       <header className="flex justify-center item-center">
         <nav class="bg-white border-gray-200 py-5 container px-4">
-          <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+          <div class="flex flex-wrap justify-between items-center mx-auto">
             <a href="https://flowbite.com" class="flex items-center">
               <img src="https://benefitplus.kr/static/dist/233fdab569a4e34edfbb805dcaae673e.png" class="h-6 sm:h-9" alt="Flowbite Logo" />
             </a>

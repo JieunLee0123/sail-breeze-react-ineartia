@@ -2,3 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===== 페이지네이션 START ===== */
+.gr {
+  color: #808080;
+}
+
+.pagination {
+  margin: 80px auto;
+  display: flex;
+  justify-content: center;
+  gap:10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul.pagination li {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+ul.pagination li:first-child {
+  background:none;
+}
+
+ul.pagination li:last-child {
+  background: none;
+}
+
+ul.pagination li.active{
+  border-radius: 50%;
+  background: #518bff;
+  box-shadow:2px 2px 2px rgba(0,0,0,0.1);
+}
+
+ul.pagination li a {
+  text-decoration: none;
+  color: #808080;
+  font-size: 0.8rem;
+}
+
+ul.pagination li.active a {
+  font-weight: 800;
+  color:#fff;
+}
+
+ul.pagination li.active {
+  font-weight: 800;
+}
+
+ul.pagination li a:hover,
+ul.pagination li a.active {
+  color: #808080;
+}
+
+.page-selection {
+  width: 48px;
+  height: 30px;
+  color: #808080;
+}
+/* ===== 페이지네이션 END ===== */
