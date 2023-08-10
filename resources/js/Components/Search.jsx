@@ -1,18 +1,40 @@
 import React, { useState } from "react";
 import Select from "./Select";
 
-const Search = ({ data }) => {
+const Search = ({ data, setDisplayedCardData }) => {
     const [detailSelectBox, setDetailSelectBox] = useState(false);
+    const [searchTerm, setSearchTerm] = useState("");
 
     const onClickDetailBtn = (e) => {
         e.preventDefault();
         setDetailSelectBox(!detailSelectBox);
-        console.log(detailSelectBox);
+        //console.log(detailSelectBox);
+    };
+
+    const filterNames = (input) => {
+        return input ? data.filter((e) => e.preview.includes(input)) : [];
+    };
+
+    const checkEqualName = (input) => {
+        const filteredArray = filterNames(input);
+        return filteredArray[0]?.name === input ? [] : filteredArray;
+    };
+
+    let searchText = checkEqualName(searchTerm);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const text = searchTerm.trim();
+        setDisplayedCardData(filterNames(text));
+        setSearchTerm("");
     };
 
     return (
         <>
-            <form className="flex flex-col items-center gap-3 sm:flex-row sm:gap-3">
+            <form
+                className="flex flex-col items-center gap-3 sm:flex-row sm:gap-3"
+                onSubmit={handleSubmit}
+            >
                 <div className="w-full sm:w-[60%] lg:w-[70%]">
                     <label htmlFor="voice-search" className="sr-only">
                         Search
@@ -41,7 +63,24 @@ const Search = ({ data }) => {
                             className="focus:ring-0 border-0 shadow-md bg-gray-50 text-gray-900 text-sm rounded-sm block w-full pl-10 p-2.5"
                             placeholder="Search"
                             required
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
                         />
+                        {searchText.length > 0 && (
+                            <ul className="p-4 bg-gray_bg text-gray-900 text-sm rounded-sm block w-full pl-10 absolute shadow-md">
+                                {searchText.map((e) => (
+                                    <li key={e.id}>
+                                        <button
+                                            onClick={() =>
+                                                setSearchTerm(e.preview)
+                                            }
+                                        >
+                                            {e.preview}
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
                     </div>
                 </div>
 
