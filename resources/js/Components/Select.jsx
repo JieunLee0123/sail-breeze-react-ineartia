@@ -27,7 +27,7 @@ const SelectOption = ({ value = "", active = false, updateValue, icon }) => {
 
   return (
     <li
-      className="text-gray-900 cursor-pointer hover:bg-indigo-500 select-none relative py-2 pl-3 pr-9"
+      className="text-gray-900 cursor-pointer hover:bg-indigo-500 hover:text-white select-none relative py-2 pl-3 pr-9"
       onClick={handleChange}
     >
       <div className="flex items-center">
