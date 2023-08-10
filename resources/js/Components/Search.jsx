@@ -8,7 +8,6 @@ const Search = ({ data, setDisplayedCardData }) => {
     const onClickDetailBtn = (e) => {
         e.preventDefault();
         setDetailSelectBox(!detailSelectBox);
-        //console.log(detailSelectBox);
     };
 
     const filterNames = (input) => {
@@ -62,7 +61,6 @@ const Search = ({ data, setDisplayedCardData }) => {
                             id="voice-search"
                             className="focus:ring-0 border-0 shadow-md bg-gray-50 text-gray-900 text-sm rounded-sm block w-full pl-10 p-2.5"
                             placeholder="Search"
-                            autoComplete="off"
                             required
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
@@ -115,12 +113,6 @@ const Search = ({ data, setDisplayedCardData }) => {
                         <Select
                             options={["전체", "준비중", "투자중", "투자완료"]}
                         />
-                        {/* <select id="countries" className="focus:ring-0 border-0 shadow-md text-gray-900 text-sm rounded-sm  block w-full p-2.5">
-                <option defaultValue>전체</option>
-                <option value="US">준비중</option>
-                <option value="CA">투자중</option>
-                <option value="FR">투자완료</option>
-              </select> */}
                     </div>
                     <div className="w-full sm:w-[48%] lg:w-[24%]">
                         <label
@@ -130,11 +122,6 @@ const Search = ({ data, setDisplayedCardData }) => {
                             그룹별
                         </label>
                         <Select options={["전체", "동네", "한살림"]} />
-                        {/* <select id="countries" className="focus:ring-0 border-0 shadow-md bg-gray-50 text-gray-900 text-sm rounded-sm  block w-full p-2.5">
-                <option defaultValue>전체</option>
-                <option value="US">동네</option>
-                <option value="CA">한살림</option>
-              </select> */}
                     </div>
                     <div className="w-full sm:w-[48%] lg:w-[24%]">
                         <label
@@ -168,29 +155,6 @@ const Search = ({ data, setDisplayedCardData }) => {
                                 "경기도청 주변 도시재생 상권 크라우드펀딩",
                             ]}
                         />
-                        {/* <select id="countries" className="focus:ring-0 border-0 shadow-md bg-gray-50 text-gray-900 text-sm rounded-sm  block w-full p-2.5">
-                <option defaultValue>전체</option>
-                <option value="US">2023 우리동네 크라우드펀딩</option>
-                <option value="CA">우리동네 펀딩</option>
-                <option value="FR">한살림상생협력펀딩</option>
-                <option value="DE">한국사회적기업진흥원크라우드펀딩</option>
-                <option value="DE">2022 수원시 도시재생 크라우드펀딩</option>
-                <option value="DE">아시아재단 경기 여성기업가 펀딩</option>
-                <option value="DE">서울시사회투자기금</option>
-                <option value="DE">성동구사회적경제활성화기금</option>
-                <option value="DE">MG희망나눔지역상생펀딩</option>
-                <option value="DE">MG희망나눔 소셜성장 지원사업</option>
-                <option value="FR">한전사회적경제조직크라우드펀딩</option>
-                <option value="FR">경상북도소셜크라우드펀딩대회</option>
-                <option value="FR">아름다운가게뷰티풀펠로우지원사업</option>
-                <option value="FR">로컬메이트펀딩</option>
-                <option value="FR">부산HUG크라우드펀딩</option>
-                <option value="FR">하나 파워온 사회혁신기업 성장지원</option>
-                <option value="FR">LH소셜벤처크라우드펀딩</option>
-                <option value="FR">창원시 사회적경제기업 크라우드펀딩</option>
-                <option value="FR">제주 사회적경제기업 경쟁력 강화 [소셜 리부트]</option>
-                <option value="FR">경기도청 주변 도시재생 상권 크라우드펀딩</option>
-              </select> */}
                     </div>
                     <div className="w-full sm:w-[48%] lg:w-[24%]">
                         <label
@@ -221,26 +185,6 @@ const Search = ({ data, setDisplayedCardData }) => {
                                 "제주",
                             ]}
                         />
-                        {/* <select id="countries" className="focus:ring-0 border-0 shadow-md bg-gray-50 text-gray-900 text-sm rounded-sm  block w-full p-2.5">
-                <option defaultValue>전체</option>
-                <option value="US">서울</option>
-                <option value="CA">경기</option>
-                <option value="FR">인천</option>
-                <option value="DE">강원</option>
-                <option value="DE">충북</option>
-                <option value="DE">세종</option>
-                <option value="DE">충남</option>
-                <option value="DE">대전</option>
-                <option value="DE">경북</option>
-                <option value="DE">대구</option>
-                <option value="DE">울산</option>
-                <option value="DE">부산</option>
-                <option value="DE">경남</option>
-                <option value="DE">전북</option>
-                <option value="DE">전남</option>
-                <option value="DE">광주</option>
-                <option value="DE">제주</option>
-              </select> */}
                     </div>
                 </div>
             ) : null}
