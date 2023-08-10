@@ -22,6 +22,29 @@
 
 <br />
 
+## Start
+
+1. alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+2. sail up
+3. [in container] npm ci
+3. [in container] npm run dev
+
+<br />
+
+## Library
+1. icons<br />
+  [vite-plugin-svgr](https://www.npmjs.com/package/vite-plugin-svgr)<br />
+
+2. tailwind<br />
+  [How I setup Sails and Tailwind CSS](https://blog.sailscasts.com/how-I-setup-tailwindcss-and-sails)<br />
+  [tailwind](https://tailwindcss.com/)<br />
+  [material-tailwind](https://www.material-tailwind.com/)<br />
+
+3. pagination<br />
+  [react-js-pagination](https://velog.io/@eunjitech/react-js-pagination-pagination-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)<br />
+
+<br />
+
 ## 기록
 
 [jetstream & breeze]<br />
@@ -64,7 +87,7 @@
 [Laravel Artisan Generator Command: The make:request Command](https://stillat.com/blog/2016/12/07/laravel-artisan-generator-command-the-makerequest-command) - App\Http\Requests<br />
 
 [Inertia & React]<br />
-[Inertia](https://inertiajs.com/) - 기존 react 와 다른 느낌. Inertia 는 따로 배워야 함<br />
+[Inertia](https://inertiajs.com/)<br />
 [[usePage] Accessing shared data](https://inertiajs.com/shared-data)<br />
 [[useForm] Form helper](https://inertiajs.com/forms)<br />
 [Server-side & Client-side](https://inertiajs.com/server-side-rendering) - SSR, SPA use both<br />
