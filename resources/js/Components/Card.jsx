@@ -2,7 +2,7 @@ import React from "react";
 import FundingType from "./label/FundingType";
 import RewardType from "./label/RewardType";
 import Area from "./label/Area";
-// import Like from "./button/Like";
+import Like from "./button/Like";
 
 const Card = ({ cardData }) => {
     const {
@@ -52,7 +52,7 @@ const Card = ({ cardData }) => {
                         <h3 className="w-5/6 text-lg lg:text-xl font-bold truncate">
                             {preview}
                         </h3>
-                        {/* <Like /> */}
+                        <Like />
                     </div>
                     <h3 className="text-gray_03 font-medium text-sm lg:text-base truncate">
                         {title}

@@ -63,6 +63,7 @@
 2. [http://0.0.0.0:5173/@vite/client net::ERR_ADDRESS_INVALID](https://joeyantonisse.medium.com/laravel-9-sail-vite-err-address-invalid-3bb50f2887bd)<br />
 3. [Failed to load resource: net::ERR_ADDRESS_INVALID](https://stackoverflow.com/questions/76360158/failed-to-load-resource-neterr-address-invalid-when-including-js-file-in-lara)<br />
 4. usePage must be used within the Inertia component - import { usePage } from '@inertiajs/react' 이렇게 써야함<br />
+5. [vite-plugin-svgr] createInertiaApp.ts:119 Uncaught (in promise) TypeError: Failed to fetch dynamically imported module - svgr 인식못함 이유 모름<br />
 
 <br />
 
