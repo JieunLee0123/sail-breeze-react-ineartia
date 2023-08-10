@@ -28,7 +28,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr class="h-[2px] my-8 bg-gray_03 border-0" />
+        <hr className="h-[2px] my-8 bg-gray_03 border-0" />
 
         <div className="flex flex-col sm:flex-row gap-7 sm:gap-10 lg:justify-between">
           <div className="hidden lg:block lg:w-[15%]" style={{ width: "15%" }}></div>
