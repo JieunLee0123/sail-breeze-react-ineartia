@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import Pagination from "./Pagination";
 
 const CardList = ({ data }) => {
     return (
@@ -13,6 +14,8 @@ const CardList = ({ data }) => {
                     펀딩 상품이 없습니다
                 </h2>
             )}
+            
+          <Pagination />
         </div>
     );
 };
