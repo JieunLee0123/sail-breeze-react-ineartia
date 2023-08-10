@@ -6,7 +6,7 @@ const CardList = ({ data }) => {
     // const [items, setItems] = React.useState([]) //리스트에 나타낼 아이템
     const [totalItemsCount, setTotalItemsCount] = React.useState(0); //아이템 총 개수
     const [activePage, setActivePage] = React.useState(1); //현재페이지
-    const [itemsCountPerPage] = React.useState(10); //페이지당 아이템 개수
+    const [itemsCountPerPage] = React.useState(9); //페이지당 아이템 개수
 
     const [indexOfLastPost, setIndexOfLastPost] = React.useState(0);
     const [indexOfFirstPost, setIndexOfFirstPost] = React.useState(0);
@@ -37,7 +37,7 @@ const CardList = ({ data }) => {
             )}
           </div>
             
-          <Paging activePage={activePage} itemsCountPerPage={10} totalItemsCount={totalItemsCount} onChangePage={onChangePage} />
+        <Paging activePage={activePage} itemsCountPerPage={itemsCountPerPage} totalItemsCount={totalItemsCount} onChangePage={onChangePage} />
         </div>
     );
 };
